@@ -1,0 +1,14 @@
+---
+- name: Install Java, Apache, Jenkins, Common tools
+  hosts: all
+  remote_user: vagrant
+  become: yes
+  become_method: sudo
+
+  roles:
+    - common
+    - java
+    - { role: apache, host_name: 'jenkins-master' }
+    - { role: jenkins, host_name: 'jenkins-master' }
+#    - apache
+#    - jenkins

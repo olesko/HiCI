@@ -8,8 +8,6 @@
   tasks:
   - name: test connection
     ping:
-  - name: install vim
-    yum: name=vim state=latest
   - name: download jenkins
     get_url: 
       url: http://pkg.jenkins-ci.org/redhat/jenkins.repo

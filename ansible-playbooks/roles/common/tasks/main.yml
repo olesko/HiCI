@@ -1,0 +1,14 @@
+---
+- name: install epel
+  yum:
+    name: epel-release
+    state: latest
+
+- name: install wget
+  yum:
+    name: wget
+    state: latest
+- name: install vim
+  yum:
+    name: vim
+    state: latest
